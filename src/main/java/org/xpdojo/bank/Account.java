@@ -8,6 +8,10 @@ public class Account {
     private Date businessDate;
     private String transactionActivity = null;
 
+    public Account() {
+        businessDate = new Date();
+        balance = 0;
+    }
     public Account(String acctNum, double initialBalance)
     {
         acctNumber = acctNum;
@@ -26,10 +30,22 @@ public class Account {
         this.transactionActivity="Withdraw";
     }
 
-    public double getBalance()
-    {
+    public double getBalance() {
         return balance;
     }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+
+    public String getAcctNumber() {
+        return acctNumber;
+    }
+
+    public void setAcctNumber(String acctNumber) {
+        this.acctNumber = acctNumber;
+    }
+
     public void printReport ()
     {
         System.out.println("As of Business Date:" +  businessDate);
